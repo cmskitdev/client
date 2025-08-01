@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // RequestBody defines the constraint for request body types.

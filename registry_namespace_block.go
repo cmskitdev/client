@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // BlockNamespace provides fluent access to block operations.

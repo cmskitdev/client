@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // CommentNamespace provides fluent access to comment operations.

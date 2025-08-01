@@ -3,7 +3,7 @@ package client
 import (
 	"net/url"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // DatabaseQueryRequestBody represents the body of a database query request.

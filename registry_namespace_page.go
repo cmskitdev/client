@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // IDE-friendly namespaces with fluent interfaces for ergonomic access

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // TestPageNamespaceGet tests the PageNamespace Get method.

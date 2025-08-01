@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // SearchNamespace provides fluent access to search operations.

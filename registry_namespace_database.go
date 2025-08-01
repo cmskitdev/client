@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // DatabaseNamespace provides fluent access to database operations.

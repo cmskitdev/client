@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/url"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // SearchOperator handles search operations with complex filtering and pagination.

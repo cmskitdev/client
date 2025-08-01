@@ -4,8 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/notioncodes/client/transformers"
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // Registry provides a type-safe, lazy-loading operator registry with caching.
@@ -18,7 +17,6 @@ type Registry struct {
 	instances    map[string]interface{}
 	initializers map[string]RegistryInitializer
 	plugins      []PluginRegistrar
-	transformers []transformers.TransformerPlugin
 }
 
 // RegistryInitializer defines how to create operator instances.
@@ -51,14 +49,9 @@ func NewRegistry(config *Config, httpClient *HTTPClient) *Registry {
 		instances:    make(map[string]interface{}),
 		initializers: make(map[string]RegistryInitializer),
 		plugins:      make([]PluginRegistrar, 0),
-		transformers: make([]transformers.TransformerPlugin, 0),
 	}
 
-	// Register core operators.
 	registry.registerCoreOperators()
-
-	// Register transformers.
-	registry.registerTransformers()
 
 	return registry
 }
@@ -146,10 +139,6 @@ func (r *Registry) registerCoreOperators() {
 	r.Register("search", func(httpClient *HTTPClient, config *OperatorConfig) interface{} {
 		return NewSearchOperator[types.SearchResult](httpClient, config)
 	})
-}
-
-func (r *Registry) registerTransformers() {
-	r.transformers = append(r.transformers, &transformers.MarkdownTransformer{})
 }
 
 // Register adds a new operator initializer to the registry.

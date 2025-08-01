@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/notioncodes/types"
+	"github.com/cmskitdev/notion/types"
 )
 
 // TestNewRegistry tests the creation of a new registry.
