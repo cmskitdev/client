@@ -201,6 +201,7 @@ func (r *Registry) Get(name string) (interface{}, error) {
 		Concurrency:   r.config.Concurrency,
 		PageSize:      r.config.PageSize,
 		Timeout:       r.config.Timeout,
+		MaxPages:      100, // Default max pages
 		EnableCaching: false, // TODO: pull from r.config
 		CacheTTL:      0,     // TODO: pull from r.config
 	})

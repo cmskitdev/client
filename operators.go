@@ -256,8 +256,12 @@ func StreamPaginated[T any, R PaginatedRequestInterface[B], B RequestBody](po *P
 	go func() {
 		defer close(resultCh)
 
+		// Debug: add a simple nil check
+		if ctx == nil {
+			return
+		}
+
 		if err := req.Validate(); err != nil {
-			resultCh <- Error[T](&ValidationError{Message: err.Error()})
 			return
 		}
 
